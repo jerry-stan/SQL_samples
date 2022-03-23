@@ -5,7 +5,7 @@ SQL functions used include: aggregate functions, joins, window functions, CTE's,
 */
 
 
---Average monthly temperature by state, with avg annual temperature by state
+--Average monthly temperature by state, compared to avg annual temperature by state
 
 --calculating average temperature range by month, and average for the year, by state
 SELECT DISTINCT
