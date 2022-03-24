@@ -3,7 +3,7 @@ Using SQL to analyze temperature data by US state over the past 25 years.
 SQL functions used include: aggregate functions, joins, window functions, CTE's, subqueries, datetime functions
 
 */
-
+--------------------------------------------------------------------------------------
 
 --Average monthly temperature by state, compared to avg annual temperature by state
 
@@ -31,7 +31,7 @@ GROUP BY
 	,AverageTemperature + AverageTemperatureUncertainty
 	,AverageTemperature - AverageTemperatureUncertainty
 ORDER BY State,Yr,Mo;
-
+---------------------------------------------------------------------------------------
 
 --state and year with highest average annual temperature over the past 25 years
 
@@ -62,7 +62,7 @@ GROUP BY
 	,Yr
 	,AvgAnnual
 ORDER BY AvgAnnual DESC;
-
+----------------------------------------------------------------------------------------
 
 --averaging state temperature change from 1996 to 2013
 
@@ -99,7 +99,7 @@ FROM (SELECT
 	FROM temp_comp) AS sub
 WHERE Yr = 2013
 ORDER BY "Temp_Chng_'96 to '13" DESC;
-
+-----------------------------------------------------------------------------------------
 
 --averaging state temperature change from 1996 to 2013, comparing the total for states east and west of the Mississippi River
 
